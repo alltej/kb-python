@@ -17,5 +17,18 @@ class UtilsTest(unittest.TestCase):
         seq = 'Monty Python'
         self.assertEqual(seq[::-1], 'nohtyP ytnoM', "reverses the list/tuple")
 
+    def test_assign_element(self):
+        seq = [1, 1, 2, 3, 5, 8, 13]
+        seq[5:] = ['H', 'a', 'l', 'l']
+        self.assertEqual([1, 1, 2, 3, 5, 'H', 'a', 'l', 'l'], seq,
+                         "assign elements to a slice (note the slice range does not have to equal number of elements to assign)")
+
+    def test_assign_into_an_index(self):
+        seq = [1, 1, 2, 3, 5, 8, 13]
+        seq[5] = ['H', 'a', 'l', 'l']
+        self.assertEqual([1, 1, 2, 3, 5, ['H', 'a', 'l', 'l'], 13], seq,
+                         "assigning into an index")
+
+
 if __name__ == '__main__':
     unittest.main()
