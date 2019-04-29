@@ -11,7 +11,6 @@ class TestUniqueChars(object):
         assert_equal(func('foo'), False)
         assert_equal(func('bar'), True)
         assert_equal(func('hello'), False)
-        assert_equal(func('hello'), True)
         print('Success: test_unique_chars')
 
 
