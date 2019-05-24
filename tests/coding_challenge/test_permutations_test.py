@@ -21,5 +21,6 @@ def main():
     permutations = Permutations()
     test.test_permutation(permutations.is_permutation)
 
+
 if __name__ == '__main__':
     main()
