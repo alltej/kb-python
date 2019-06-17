@@ -46,8 +46,7 @@ def printBasic(ns):
 
 def printNodes(node):
     print("printNodes")
-    a = []
-    a.append(node)
+    a = [node]
     parent = [a]
     while len(parent) > 0:
         # print("test")
